@@ -1,0 +1,7 @@
+__pycache__
+env
+.env
+.env-fordocker
+test_db.db
+attachments
+commands.txt

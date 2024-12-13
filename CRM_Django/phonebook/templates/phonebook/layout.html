@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            h3{
+                color: blue;
+                text-align: center;
+            }
+        </style>
+        <title>
+            phonebook
+        </title>
+    </head>
+    <body>
+        <h3>phonebook</h3>
+
+        <p>
+        {% if request.user.is_authenticated %}
+            welcome, {{ request.user.first_name }}
+        {% endif %}
+        
+        {% if request.user.is_authenticated %}
+            <a href="{% url 'users:logout' %}">Log out</a>
+        {% endif %}
+        </p>
+
+        {% block body %}
+            
+        {% endblock %}
+    </body>
+</html>
